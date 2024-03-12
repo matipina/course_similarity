@@ -46,22 +46,27 @@ def main():
 
     # Load data
     data = load_data()
-    st.write(data.head())
 
     # Centered options
     col1, col2 = st.columns([1, 1])
     selected_course = col1.selectbox('Select a course:', data['Course Title'])
     limit = col2.slider('Max Number of Similar Courses', 1, 20, 10)
-    display_info = col1.checkbox('Display Names and Descriptions')
 
     # Find the index of the selected course
+    try:
+        selected_course_data = data[data['Course Title'] == selected_course].iloc[0]
+        st.subheader(f'Selected course: {selected_course_data['Course Title']}')
+        st.write(selected_course_data['Course Description'])
+    except:
+        st.warning('No results')
+        
     i = data.index[data['Course Title'] == selected_course][0]
-
+    
     # Show similar courses
     st.subheader('Similar Courses:')
+    display_info = col1.checkbox('Display Names and Descriptions')
     similar_courses = show_similars(data, i, limit, display_info)
     if similar_courses is not None:
-        print(f'similar_courses: ({type(similar_courses)}) {similar_courses}')
         for course_info in similar_courses:
             #print(f'course_info: {course_info}')
             if display_info:
