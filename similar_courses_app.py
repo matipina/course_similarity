@@ -49,13 +49,13 @@ def main():
 
     # Centered options
     col1, col2 = st.columns([1, 1])
-    selected_course = col1.selectbox('Select a course:', data['Course Title'])
+    selected_course = col1.selectbox('Select a course:', data["Course Title"])
     limit = col2.slider('Max Number of Similar Courses', 1, 20, 10)
 
     # Find the index of the selected course
     try:
         selected_course_data = data[data['Course Title'] == selected_course].iloc[0]
-        st.subheader(f'Selected course: {selected_course_data['Course Title']}')
+        st.subheader(f'Selected course: {selected_course_data["Course Title"]}')
         st.write(selected_course_data['Course Description'])
     except:
         st.warning('No results')
