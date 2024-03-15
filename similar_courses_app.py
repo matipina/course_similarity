@@ -42,8 +42,13 @@ def load_data():
     return pd.read_pickle('processed_data.pkl')
 
 def main():
-    st.title('Similar Courses App')
+    st.title('Recommendation System for Similar Courses at The New School')
+    
+    st.write('The recommendation system has two main goals:')
+    st.markdown('- To guide students to similar courses when their desired courses are full.')
+    st.markdown('- To support academic leaders in identifying overlapping content in the curriculum to improve planning.')
 
+    st.markdown('---')
     # Load data
     data = load_data()
 
