@@ -178,10 +178,8 @@ def main():
                                             == selected_course].iloc[0]
         with st.container(border=True):
             st.header(f'{selected_course_data["Course Title"]}', divider='red')
-            st.write(f'{selected_course_data["College"]} | {
-                     selected_course_data["Department"]} | {selected_course_data["Campus"]}')
-            st.write(
-                f"Schedule type: **{selected_course_data['Schedule Type']}**")
+            st.write(f'{selected_course_data["College"]} | {selected_course_data["Department"]} | {selected_course_data["Campus"]}')
+            st.write(f"Schedule type: **{selected_course_data['Schedule Type']}**")
             st.subheader('Description')
             st.write(selected_course_data['Course Description'])
     except:
@@ -200,10 +198,8 @@ def main():
                 for course_info in similar_courses:
                     with st.container(border=True):
                         st.header(f"{i}. {course_info['title']}")
-                        st.write(f'{course_info["college"]} | {
-                            course_info["department"]} | {course_info["campus"]}')
-                        st.write(
-                            f"Schedule type: **{course_info['schedule']}**")
+                        st.write(f'{course_info["college"]} | {course_info["department"]} | {course_info["campus"]}')
+                        st.write(f"Schedule type: **{course_info['schedule']}**")
                         with st.expander('Description', expanded=False):
                             st.write(f"{course_info['description']}")
                     i += 1
