@@ -156,15 +156,14 @@ def main():
     update_filters('Department', selected_department)
     update_filters('Schedule Type', selected_schedule)
 
-    st.write(st.session_state['selected_filters'])
-    st.write(st.session_state['filters_options'])
+    #st.write(st.session_state['selected_filters'])
 
-    st.write(f'College options: {college_options}')
-    st.write(f'Campus options: {campus_options}')
-    st.write(f'Selected college: {selected_college}')
-    st.write(f'Selected campus: {selected_campus}')
-    st.write(f'Selected department: {selected_department}')
-    st.write(f'Selected schedule: {selected_schedule}')
+    #st.write(f'College options: {college_options}')
+    #st.write(f'Campus options: {campus_options}')
+    #st.write(f'Selected college: {selected_college}')
+    #st.write(f'Selected campus: {selected_campus}')
+    #st.write(f'Selected department: {selected_department}')
+    #st.write(f'Selected schedule: {selected_schedule}')
 
     # Course selector setup
     courses = np.insert(filter_data(grouped_data)[
