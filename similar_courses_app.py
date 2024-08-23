@@ -3,10 +3,8 @@ To do's:
     - Group courses with same name (Figure out how to work with the different sections)
     - Display more information by course
     - Display information about the selected course
-    - Add default option in dropdown menu to select course
     - Add filter by semester
 '''
-
 
 import streamlit as st
 import pandas as pd
