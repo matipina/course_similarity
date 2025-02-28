@@ -2,7 +2,9 @@
 
 ## Overview
 
-The **Course Recommender App** helps students find similar courses based on course descriptions. It also assists academic leaders in identifying overlapping content in the curriculum.
+The **Course Recommender App** helps students at The New School find similar courses based on course descriptions. It also assists academic leaders in identifying overlapping content in the curriculum.
+
+**Disclaimer:** I paused the development of this app, not sure when I'll get back to it.
 
 ## Features
 
