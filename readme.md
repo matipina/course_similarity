@@ -31,4 +31,9 @@ The **Course Recommender App** helps students at The New School find similar cou
     ```bash
     streamlit run similar_courses_app.py
 
+## Screenshots
+![App Screenshot](Still01.png)
+
+![App Screenshot](Still02.png)
+
 TNS brand guidelines: https://drive.google.com/drive/folders/1rlk5fI_3eimVMj42QKhxa0yfIBKL4hqA
